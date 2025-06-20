@@ -1,2 +1,3 @@
 logger "install.sh was just launched"
-sed -i '/install.sh/d' /root/.bashrc
+thisscriptname=$(basename "$0")
+sed -i "/$thisscriptname/d" /root/.bashrc
